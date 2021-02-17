@@ -6,18 +6,21 @@ from django.http import HttpResponse
 
 posts =[
     {
-        'name' : 'Name1',
-        'id' : '1',
+        'title' : 'Name1',
+        'auther' : '1',
+        'date' : '27-2-2021',
         'content' : 'first content'
     },
     {
-        'name' : 'Name2',
-        'id' : '2',
+        'title' : 'Name2',
+        'auther' : '2',
+        'date' : '28-2-2021',
         'content' : 'second content'
     },
     {
-        'name' : 'Name3',
-        'id' : '3',
+        'title' : 'Name3',
+        'auther' : '3',
+        'date' : '29-2-2021',
         'content' : 'third content'
     },
     
@@ -30,4 +33,4 @@ def home(request):
     return render(request,'blog/home.html',context)
 
 def about(request):
-    return render(request,'blog/about.html')
+    return render(request,'blog/about.html',{'title':'about'})
